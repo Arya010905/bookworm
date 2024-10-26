@@ -27,19 +27,35 @@ const CardSide = styled.div`
   backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
 `;
 
+// const CardFront = styled(CardSide)`
+//     background-image: url(${props => props.cover});
+//     background-size: contain; /* Ensure the image covers the entire card */
+//     background-position: center; /* Center the image */
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end; /* Align text at the bottom */
+//     align-items: flex-start;
+//     color: white;
+//     padding: 20px;
+//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+// `;
 const CardFront = styled(CardSide)`
-  background-image: url(${props => props.cover});
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  color: white;
-  padding: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    padding: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+`;
+
+const CoverImage = styled.img`
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Make the image take the full height */
+    object-fit: contain; /* Ensure the image covers the entire area without distortion */
 `;
 
 const CardBack = styled(CardSide)`
@@ -97,11 +113,13 @@ const BookCard = ({ cover, title, author, summary, onSwitch }) => {
   };
 
   return (
+    
     <CardContainer onClick={handleClick}>
       <Card flipped={flipped}>
         <CardFront cover={cover}>
           <Title>{title}</Title>
           <Author>{author}</Author>
+          <CoverImage src={cover} alt={title} />
         </CardFront>
         <CardBack>
           <p>{summary}</p>
