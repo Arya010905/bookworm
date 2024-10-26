@@ -6,7 +6,7 @@ const XIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -120px; /* Position below the card */
+  bottom: -180px; /* Position below the card */
   left: -100px; /* Center alignment */
 `;
 
@@ -15,7 +15,7 @@ const CheckIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -120px; /* Position below the card */
+  bottom: -180px; /* Position below the card */
   left: 380px; /* Center alignment */
 `;
 

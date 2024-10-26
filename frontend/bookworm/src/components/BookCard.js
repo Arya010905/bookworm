@@ -30,18 +30,6 @@ const CardSide = styled.div`
   padding: 10px;
 `;
 
-// const CardFront = styled(CardSide)`
-//     background-image: url(${props => props.cover});
-//     background-size: contain; /* Ensure the image covers the entire card */
-//     background-position: center; /* Center the image */
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-end; /* Align text at the bottom */
-//     align-items: flex-start;
-//     color: white;
-//     padding: 20px;
-//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-// `;
 const CardFront = styled(CardSide)`
     display: flex;
     flex-direction: column;
@@ -79,7 +67,7 @@ const Title = styled.h3`
 
 const Author = styled.p`
   position: absolute;
-  top: 440px;
+  top: 300px;
   left: 10px;
   margin: 0;
   font-size: 1em;
@@ -94,6 +82,20 @@ const IconsContainer = styled.div`
   justify-content: space-between;
   padding: 0 20px;
   z-index: 10;
+`;
+
+const TitleAuthorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text */
+  justify-content: center; /* Center vertically */
+  height: 90px; /* Set a specific height */
+  width: 408px;
+  background-color: rgba(0, 0, 0, 0.7); /* Optional background for readability */
+  color: white; /* Text color */
+  border-radius: 10px 10px 0 0; /* Round top corners */
+  padding: 5px 10px; /* Adjust padding for aesthetics */
+  text-align: center; /* Center the text */
 `;
 
 const BookCard = ({ cover, title, author, summary, onSwitch }) => {
@@ -116,9 +118,13 @@ const BookCard = ({ cover, title, author, summary, onSwitch }) => {
     
     <CardContainer onClick={handleClick}>
       <Card flipped={flipped}>
+      <TitleAuthorContainer>
+        <h3>{title}</h3>
+        <p>{author}</p>
+      </TitleAuthorContainer>
         <CardFront cover={cover}>
-          <Title>{title}</Title>
-          <Author>{author}</Author>
+          {/* <Title>{title}</Title>
+          <Author>{author}</Author> */}
           <CoverImage src={cover} alt={title} />
         </CardFront>
         <CardBack>
