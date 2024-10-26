@@ -91,7 +91,7 @@ const TitleAuthorContainer = styled.div`
   justify-content: center; /* Center vertically */
   height: 90px; /* Set a specific height */
   width: 408px;
-  background-color: rgba(0, 0, 0, 0.7); /* Optional background for readability */
+  background-color: rgba(0, 100, 148, 1); /* Optional background for readability */
   color: white; /* Text color */
   border-radius: 10px 10px 0 0; /* Round top corners */
   padding: 5px 10px; /* Adjust padding for aesthetics */
