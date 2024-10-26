@@ -6,8 +6,8 @@ const XIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -60px; /* Position below the card */
-  left: -74px; /* Center alignment */
+  bottom: -90px; /* Position below the card */
+  left: -78px; /* Center alignment */
 `;
 
 const CheckIconContainer = styled.div`
@@ -15,8 +15,8 @@ const CheckIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -60px; /* Position below the card */
-  left: 242px; /* Center alignment */
+  bottom: -90px; /* Position below the card */
+  left: 204px; /* Center alignment */
 `;
 
 const Icon = styled.div`

@@ -4,20 +4,10 @@ import CircularIcons from './CircularIcons';
 
 const CardContainer = styled.div`
   position: relative;
-  width: 250px;
-  height: 350px;
-  background-image: url(${props => props.cover});
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: white;
-  padding: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  width: 200px; /* Set desired width */
+  height: 300px; /* Set desired height */
+  perspective: 1000px; /* Enable 3D perspective */
+  margin: 20px; /* Add margin to space out cards */
 `;
 
 const Card = styled.div`
@@ -30,16 +20,19 @@ const Card = styled.div`
   ${({ flipped }) => flipped && 'transform: rotateY(180deg);'}
 `;
 
-const CardFront = styled.div`
+const CardSide = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+`;
+
+const CardFront = styled(CardSide)`
   background-image: url(${props => props.cover});
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -48,20 +41,14 @@ const CardFront = styled.div`
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `;
 
-const CardBack = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+const CardBack = styled(CardSide)`
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transform: rotateY(180deg); /* Rotate back side */
 `;
 
@@ -77,37 +64,37 @@ const Author = styled.p`
 
 const IconsContainer = styled.div`
   position: absolute;
-  width: 100%;
-  bottom: 10px; /* Adjust to position above the card */
+  bottom: 10px; /* Adjust this value to fine-tune alignment */
   left: 0;
+  right: 0; /* Stretch across */
   display: flex;
   justify-content: space-between;
-  padding: 0 20px; /* Add some padding to center the icons */
+  padding: 0 20px; /* Add padding for aesthetics */
   z-index: 10; /* Ensure icons are above the card */
 `;
 
 const BookCard = ({ cover, title, author, summary }) => {
-    const [flipped, setFlipped] = useState(false);
-  
-    const handleClick = () => {
-      setFlipped(!flipped);
-    };
-  
-    return (
-      <CardContainer onClick={handleClick}>
-        <Card flipped={flipped}>
-          <CardFront cover={cover}>
-            <Title>{title}</Title>
-            <Author>{author}</Author>
-          </CardFront>
-          <CardBack>
-            <p>{summary}</p>
-          </CardBack>
-        </Card>
-        <IconsContainer>
-          <CircularIcons />
-        </IconsContainer>
-      </CardContainer>
+  const [flipped, setFlipped] = useState(false);
+
+  const handleClick = () => {
+    setFlipped(!flipped);
+  };
+
+  return (
+    <CardContainer onClick={handleClick}>
+      <Card flipped={flipped}>
+        <CardFront cover={cover}>
+          <Title>{title}</Title>
+          <Author>{author}</Author>
+        </CardFront>
+        <CardBack>
+          <p>{summary}</p>
+        </CardBack>
+      </Card>
+      <IconsContainer>
+        <CircularIcons />
+      </IconsContainer>
+    </CardContainer>
   );
 };
 
