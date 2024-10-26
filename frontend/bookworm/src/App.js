@@ -4,14 +4,15 @@ import BookCard from './components/BookCard';
 import profilelogo from './images/profilelogo.png';
 import Profile from './components/Profile';
 import { Route, Routes, Link } from 'react-router-dom';
+import BookList from './components/BookList';
 
 const App = () => {
-  const book = {
-    cover: 'https://example.com/path/to/cover.jpg', // Replace with your cover image URL
-    title: 'The Great Book',
-    author: 'John Doe',
-    summary: 'This is a brief summary of the book.',
-  };
+  // const book = {
+  //   cover: 'https://example.com/path/to/cover.jpg', // Replace with your cover image URL
+  //   title: 'The Great Book',
+  //   author: 'John Doe',
+  //   summary: 'This is a brief summary of the book.',
+  // };
 
   return (
     <div className="app-container">
@@ -23,7 +24,8 @@ const App = () => {
           path="/"
           element={
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-              <BookCard cover={book.cover} title={book.title} author={book.author} summary={book.summary} />
+              {/* <BookCard cover={book.cover} title={book.title} author={book.author} summary={book.summary} /> */}
+              <BookList />
               <Link to="/profile" className="profile-logo">
                 <img src={profilelogo} alt="Profile" />
               </Link>
