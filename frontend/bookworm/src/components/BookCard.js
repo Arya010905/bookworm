@@ -35,10 +35,10 @@ const CardFront = styled(CardSide)`
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Change this to control vertical alignment */
-  align-items: flex-start; /* Control horizontal alignment */
+  justify-content: flex-start;
+  align-items: flex-start;
   color: white;
-  padding: 20px; /* Adjust padding for more space */
+  padding: 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `;
 
@@ -50,45 +50,50 @@ const CardBack = styled(CardSide)`
   align-items: center;
   text-align: center;
   padding: 10px;
-  transform: rotateY(180deg); /* Rotate back side */
+  transform: rotateY(180deg);
 `;
 
 const Title = styled.h3`
-  position: absolute; /* Position it absolutely */
-  top: 415px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
+  position: absolute;
+  top: 415px;
+  left: 10px;
   margin: 0;
-  font-size: 1.2em; /* Adjust font size */
+  font-size: 1.2em;
 `;
 
-const Author = styled.p`\
-  position: absolute; /* Position it absolutely */
-  top: 440px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
+const Author = styled.p`
+  position: absolute;
+  top: 440px;
+  left: 10px;
   margin: 0;
-  font-size: 1em; /* Adjust font size */
+  font-size: 1em;
 `;
 
 const IconsContainer = styled.div`
   position: absolute;
-  bottom: 10px; /* Adjust this value to fine-tune alignment */
+  bottom: 10px;
   left: 0;
-  right: 0; /* Stretch across */
+  right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px; /* Add padding for aesthetics */
-  z-index: 10; /* Ensure icons are above the card */
+  padding: 0 20px;
+  z-index: 10;
 `;
 
-const BookCard = ({ cover, title, author, summary }) => {
+const BookCard = ({ cover, title, author, summary, onSwitch }) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleClick = () => {
     setFlipped(!flipped);
   };
 
-  const handleIconClick = (e) => {
+  const handleCircClick = (e) => {
     e.stopPropagation(); // Prevent click from propagating to the card
+    if (onSwitch && typeof onSwitch === 'function') {
+      onSwitch(); // Call to switch to the next book
+    } else {
+      console.error('onSwitch is not a function');
+    }
   };
 
   return (
@@ -103,9 +108,7 @@ const BookCard = ({ cover, title, author, summary }) => {
         </CardBack>
       </Card>
       <IconsContainer>
-        <div onClick={handleIconClick}>
-          <CircularIcons />
-        </div>
+        <CircularIcons onCircleClick={handleCircClick} />
       </IconsContainer>
     </CardContainer>
   );

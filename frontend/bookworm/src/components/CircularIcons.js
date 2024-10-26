@@ -39,17 +39,17 @@ const Icon = styled.div`
   }
 `;
 
-const CircularIcons = () => {
-  return (
-    <>
-    <XIconContainer>
-      <Icon className="x">✖</Icon>
-    </XIconContainer>
-    <CheckIconContainer>
-        <Icon className="check">✔</Icon>
-    </CheckIconContainer>
-    </>
-  );
-};
-
-export default CircularIcons;
+const CircularIcons = ({ onCircleClick }) => {
+    return (
+      <>
+        <XIconContainer>
+          <Icon className="x" onClick={onCircleClick}>✖</Icon>
+        </XIconContainer>
+        <CheckIconContainer>
+          <Icon className="check" onClick={onCircleClick}>✔</Icon>
+        </CheckIconContainer>
+      </>
+    );
+  };
+  
+  export default CircularIcons;
