@@ -22,10 +22,15 @@
   position: absolute;
   top: 10px;
   left: 20px; /* Adjust as needed */
-  font-size: 40px; /* Adjust font size */
+  font-size: 40px;
   font-weight: bold;
-  background-color: white; 
+  background-color: #f0f4f8;
   color: #282c34;
+  text-decoration: none; /* Remove underline */
+}
+
+.App-header:hover {
+  color: #0056b3; /* Optional: change color on hover */
 }
 
 .profile-logo {

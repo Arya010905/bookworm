@@ -9,7 +9,7 @@ import BookList from './components/BookList';
 const App = () => {
   return (
     <div className="app-container">
-      <div className="App-header">Bookworm</div>
+      <Link to="/" className="App-header">bookworm</Link>
 
       {/* Routes for different pages */}
       <Routes>
