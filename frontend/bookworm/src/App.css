@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
   position: relative;
-  background-color: white; /* Set your desired background color */
+  background-color: #f0f4f8; /* Light background for the entire app */
 }
 
 .App-logo {
@@ -25,7 +25,7 @@
   font-size: 40px; /* Adjust font size */
   font-weight: bold;
   background-color: white; 
-  color:#282c34;
+  color: #282c34;
 }
 
 .profile-logo {
@@ -41,3 +41,53 @@
   border-radius: 50%; /* Optional: make it circular */
 }
 
+/* New styles for Profile component */
+.profile-page {
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  background-color: #ffffff; /* White background for contrast */
+}
+
+.profile-section {
+  background-color: #e7f3fe; /* Light blue background for sections */
+  padding: 20px;
+  margin: 20px 0; /* Margin between sections */
+  border-radius: 10px; /* Rounded corners for sections */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.profile-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333; /* Darker text color */
+}
+
+.profile-page h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  color: #0056b3; /* Dark blue color for headings */
+}
+
+.profile-page p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555; /* Medium gray for paragraph text */
+}
+
+.profile-page ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.profile-page li {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #333; /* Darker text color */
+  padding: 5px 10px;
+  border-radius: 5px; /* Rounded corners for list items */
+  background-color: #f1f1f1; /* Light gray for list items */
+}
