@@ -4,8 +4,8 @@ import CircularIcons from './CircularIcons';
 
 const CardContainer = styled.div`
   position: relative;
-  width: 200px; /* Set desired width */
-  height: 300px; /* Set desired height */
+  width: 400px; /* Set desired width */
+  height: 500px; /* Set desired height */
   perspective: 1000px; /* Enable 3D perspective */
   margin: 20px; /* Add margin to space out cards */
 `;
@@ -35,9 +35,10 @@ const CardFront = styled(CardSide)`
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Change this to control vertical alignment */
+  align-items: flex-start; /* Control horizontal alignment */
   color: white;
-  padding: 10px;
+  padding: 20px; /* Adjust padding for more space */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `;
 
@@ -53,11 +54,17 @@ const CardBack = styled(CardSide)`
 `;
 
 const Title = styled.h3`
+  position: absolute; /* Position it absolutely */
+  top: 415px; /* Adjust top position */
+  left: 10px; /* Adjust left position */
   margin: 0;
   font-size: 1.2em; /* Adjust font size */
 `;
 
-const Author = styled.p`
+const Author = styled.p`\
+  position: absolute; /* Position it absolutely */
+  top: 440px; /* Adjust top position */
+  left: 10px; /* Adjust left position */
   margin: 0;
   font-size: 1em; /* Adjust font size */
 `;
@@ -80,6 +87,10 @@ const BookCard = ({ cover, title, author, summary }) => {
     setFlipped(!flipped);
   };
 
+  const handleIconClick = (e) => {
+    e.stopPropagation(); // Prevent click from propagating to the card
+  };
+
   return (
     <CardContainer onClick={handleClick}>
       <Card flipped={flipped}>
@@ -92,7 +103,9 @@ const BookCard = ({ cover, title, author, summary }) => {
         </CardBack>
       </Card>
       <IconsContainer>
-        <CircularIcons />
+        <div onClick={handleIconClick}>
+          <CircularIcons />
+        </div>
       </IconsContainer>
     </CardContainer>
   );

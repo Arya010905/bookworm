@@ -6,8 +6,8 @@ const XIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -90px; /* Position below the card */
-  left: -78px; /* Center alignment */
+  bottom: -120px; /* Position below the card */
+  left: -100px; /* Center alignment */
 `;
 
 const CheckIconContainer = styled.div`
@@ -15,13 +15,13 @@ const CheckIconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
-  bottom: -90px; /* Position below the card */
-  left: 204px; /* Center alignment */
+  bottom: -120px; /* Position below the card */
+  left: 380px; /* Center alignment */
 `;
 
 const Icon = styled.div`
-  width: 90px; /* Size of the circle */
-  height: 90px; /* Size of the circle */
+  width: 140px; /* Size of the circle */
+  height: 140px; /* Size of the circle */
   border-radius: 50%;
   display: flex;
   justify-content: center;
