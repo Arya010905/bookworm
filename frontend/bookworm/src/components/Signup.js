@@ -4,7 +4,7 @@ const Signup = () => {
   const handleSignup = () => {
     // Here you would typically handle the OAuth signup process,
     // such as redirecting to the OAuth provider.
-    window.location.href = 'PROPEL_URL'; // Replace with your actual OAuth signup URL
+    window.location.href = 'https://18339885.propelauthtest.com'; // Replace with your actual OAuth signup URL
   };
 
   return (

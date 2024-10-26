@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import profilelogo from './images/profilelogo.png';
 import Profile from './components/Profile';
+import Signup from './components/Signup';
 import { Route, Routes, Link } from 'react-router-dom';
 import BookList from './components/BookList';
 
@@ -27,7 +28,7 @@ const App = () => {
           }
         />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<div>Signup Page</div>} /> {/* Placeholder for Signup page */}
+        <Route path="/signup" element={<Signup />} /> {/* Placeholder for Signup page */}
       </Routes>
     </div>
   );

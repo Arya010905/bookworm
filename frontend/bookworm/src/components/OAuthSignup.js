@@ -2,7 +2,7 @@
 import React from 'react';
 
 const OAuthSignup = () => {
-  const authUrl = 'PROPEL_URL'; // Replace with your actual Propel auth URL
+  const authUrl = 'https://18339885.propelauthtest.com'; // Replace with your actual Propel auth URL
 
   const handleSignup = () => {
     window.location.href = authUrl; // Redirect to the auth URL
