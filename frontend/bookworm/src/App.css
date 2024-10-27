@@ -1,10 +1,15 @@
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   position: relative;
-  background-color: #fdfefe; /* Light background for the entire app */
+  background-color: #CDC2BC; /* Light background for the entire app */
 }
 
 .App-logo {
@@ -24,12 +29,14 @@
   top: 5px;
   right: 20px; /* Adjust as needed */
   cursor: pointer;
+  color: #CDC2BC
 }
 
 .profile-logo img {
   width: 50px; /* Adjust logo size */
   height: 50px; /* Adjust logo size */
   border-radius: 50%; /* Optional: make it circular */
+  color: #CDC2BC
 }
 
 .profile-text {
@@ -115,6 +122,7 @@
   margin-top: 10px;
   margin-right: 105px;
   text-decoration: none; /* Remove underline */
+  font-weight: bold;
 }
 
 .sign-up-button:hover {
@@ -130,7 +138,7 @@
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   font-weight: bold;
-  background-color: #fdfefe; 
+  background-color: #CDC2BC; 
 }
 
 .header-title {
@@ -153,12 +161,14 @@
   align-items: center; /* Center align the content */
   padding: 50px; /* Add some padding */
   background-color: #CDC2BC; /* Light background for contrast */
-  margin-top: 30px;
+  margin-top: 60px;
+  height: 40px;
 }
 
 .signup-page h1 {
   color: #13293d; /* Darker color for the heading */
   margin-bottom: 20px; /* Space below the heading */
+  margin-top: -30px;
 }
 
 .signup-button {

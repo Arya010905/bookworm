@@ -5,7 +5,7 @@ import CircularIcons from './CircularIcons';
 
 const CardContainer = styled.div`
   position: absolute; /* Change to absolute to position it relative to the nearest positioned ancestor */
-  top: 110px; /* Adjust as needed */
+  top: 80px; /* Adjust as needed */
   left: 530px; /* Adjust as needed */
   width: 400px; /* Set desired width */
   height: 500px; /* Set desired height */
@@ -35,11 +35,12 @@ const CardSide = styled.div`
 `;
 
 const CardFront = styled(CardSide)`
+  background-color: #E6E1DE;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  color: #5e5352;
+  color: #E6E1DE;
   padding: 15px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `;
@@ -51,7 +52,7 @@ const CoverImage = styled.img`
 `;
 
 const CardBack = styled(CardSide)`
-  background-color: #e7f3fe;
+  background-color: #E6E1DE;
   color: #5e5352;
   display: flex;
   justify-content: center;
@@ -88,6 +89,25 @@ const TitleAuthorContainer = styled.div`
   text-align: center; 
 `;
 
+const Title = styled.h3`
+  margin: 0; /* Reset margin */
+  padding: 5px; /* Add some padding if needed */
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Adjust as needed */
+  font-size: 1.7em;
+  /* Additional styling to change position */
+`;
+
+const Author = styled.p`
+  margin-top: 10px; /* Add margin to space from title */
+  margin-bottom: 0; /* Reset bottom margin */
+  padding: 0; /* Reset padding */
+  position: absolute; /* Absolute positioning */
+  top: 55px; /* Adjust as needed */
+  font-size: 1.3em;
+  /* Additional styling to change position */
+`;
+
 const BookCard = ({ cover, title, author, summary, onSwitch }) => {
   const [flipped, setFlipped] = useState(false);
 
@@ -111,14 +131,14 @@ const BookCard = ({ cover, title, author, summary, onSwitch }) => {
     <CardContainer onClick={handleClick}>
       <Card flipped={flipped}>
         <TitleAuthorContainer>
-          <h3>{title}</h3>
-          <p>{displayAuthors}</p> {/* Display the authors */}
+          <Title>{title}</Title>
+          <Author>{displayAuthors}</Author> {/* Display the authors */}
         </TitleAuthorContainer>
         <CardFront cover={cover}>
           <CoverImage src={cover} alt={title} />
         </CardFront>
         <CardBack>
-          <p>{summary}</p>
+          <h3>{summary}</h3>
         </CardBack>
       </Card>
       <IconsContainer>

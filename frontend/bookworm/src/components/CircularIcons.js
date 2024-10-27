@@ -31,11 +31,11 @@ const Icon = styled.div`
   cursor: pointer;
 
   &.check {
-    background-color: #057e82; /* Green background for check */
+    background-color: #7D6C66; /* Green background for check */
   }
 
   &.x {
-    background-color: #7a0509; /* Red background for X */
+    background-color: #403A3F; /* Red background for X */
   }
 `;
 
