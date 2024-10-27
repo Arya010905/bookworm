@@ -35,23 +35,13 @@ const CardSide = styled.div`
 `;
 
 const CardFront = styled(CardSide)`
-<<<<<<< Updated upstream
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    color: #006494;;
-    padding: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-=======
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  color: white;
+  color: #5e5352;
   padding: 15px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
->>>>>>> Stashed changes
 `;
 
 const CoverImage = styled.img`
@@ -62,7 +52,7 @@ const CoverImage = styled.img`
 
 const CardBack = styled(CardSide)`
   background-color: #e7f3fe;
-  color: black;
+  color: #5e5352;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +81,8 @@ const TitleAuthorContainer = styled.div`
   justify-content: center; 
   height: 90px; 
   width: 408px;
-  background-color: rgba(0, 100, 148, 1); 
-  color: white; 
+  background-color: rgba(155, 133, 121, 1); 
+  color: rgba(33, 33, 43, 1); 
   border-radius: 10px 10px 0 0; 
   padding: 5px 10px; 
   text-align: center; 
