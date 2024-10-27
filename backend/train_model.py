@@ -14,13 +14,13 @@ import os
 
 
 headers = {
-    "X-OpenAI-Api-Key": "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"
+    "X-OpenAI-Api-Key": "OpenAI_API_KEY"
 }  # Replace with your OpenAI API key
 
 client = weaviate.connect_to_weaviate_cloud(
-    cluster_url="https://yiyk7ncdsyejxb3lgmcu7w.c0.us-east1.gcp.weaviate.cloud",  # Replace with your WCD URL
+    cluster_url="WCD_URL",  # Replace with your WCD URL
     auth_credentials=Auth.api_key(
-        "b01RJ3Bn2SU92q9pIAOBal5rMORGcfhmveTE"
+        "WCD_KEY"
     ),  # Replace with your WCD key
     headers=headers,
 )
