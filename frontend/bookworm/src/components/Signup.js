@@ -1,5 +1,5 @@
 import React from 'react';
-import '/Users/sanya/Desktop/bookworm/frontend/bookworm/src/App.css'; // Ensure to import your CSS file
+import '../App.css'; // Ensure to import your CSS file
 
 const Signup = () => {
   const handleSignup = () => {
