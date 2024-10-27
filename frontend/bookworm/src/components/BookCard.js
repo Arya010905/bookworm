@@ -81,10 +81,10 @@ const TitleAuthorContainer = styled.div`
   align-items: center; 
   justify-content: center; 
   height: 90px; 
-  width: 408px;
+  width: 406px;
   background-color: rgba(155, 133, 121, 1); 
   color: rgba(33, 33, 43, 1); 
-  border-radius: 10px 10px 0 0; 
+  border-radius: 10px 10px 10px 10px; 
   padding: 5px 10px; 
   text-align: center; 
 `;
