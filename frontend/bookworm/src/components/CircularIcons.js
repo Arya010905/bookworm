@@ -50,6 +50,6 @@ const CircularIcons = ({ onCircleClick }) => {
         </CheckIconContainer>
       </>
     );
-  };
+};
   
-  export default CircularIcons;
+export default CircularIcons;

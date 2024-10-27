@@ -1,3 +1,4 @@
+// BookCard.js
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import CircularIcons from './CircularIcons';
@@ -34,6 +35,7 @@ const CardSide = styled.div`
 `;
 
 const CardFront = styled(CardSide)`
+<<<<<<< Updated upstream
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,12 +43,21 @@ const CardFront = styled(CardSide)`
     color: #006494;;
     padding: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+=======
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: white;
+  padding: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+>>>>>>> Stashed changes
 `;
 
 const CoverImage = styled.img`
-    width: 100%; /* Make the image take the full width */
-    height: 100%; /* Make the image take the full height */
-    object-fit: contain; /* Ensure the image covers the entire area without distortion */
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
 `;
 
 const CardBack = styled(CardSide)`
@@ -61,22 +72,6 @@ const CardBack = styled(CardSide)`
   
 `;
 
-const Title = styled.h3`
-  position: absolute;
-  top: 415px;
-  left: 10px;
-  margin: 0;
-  font-size: 2.0em;
-`;
-
-const Author = styled.p`
-  position: absolute;
-  top: 300px;
-  left: 10px;
-  margin: 0;
-  font-size: 1.7em;
-`;
-
 const IconsContainer = styled.div`
   position: absolute;
   bottom: 10px;
@@ -88,18 +83,19 @@ const IconsContainer = styled.div`
   z-index: 10;
 `;
 
+
 const TitleAuthorContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the text */
-  justify-content: center; /* Center vertically */
-  height: 90px; /* Set a specific height */
+  align-items: center; 
+  justify-content: center; 
+  height: 90px; 
   width: 408px;
-  background-color: rgba(0, 100, 148, 1); /* Optional background for readability */
-  color: white; /* Text color */
-  border-radius: 10px 10px 0 0; /* Round top corners */
-  padding: 5px 10px; /* Adjust padding for aesthetics */
-  text-align: center; /* Center the text */
+  background-color: rgba(0, 100, 148, 1); 
+  color: white; 
+  border-radius: 10px 10px 0 0; 
+  padding: 5px 10px; 
+  text-align: center; 
 `;
 
 const BookCard = ({ cover, title, author, summary, onSwitch }) => {
@@ -118,17 +114,17 @@ const BookCard = ({ cover, title, author, summary, onSwitch }) => {
     }
   };
 
+  // Handle author display
+  const displayAuthors = Array.isArray(author) ? author.join(', ') : author;
+
   return (
-    
     <CardContainer onClick={handleClick}>
       <Card flipped={flipped}>
-      <TitleAuthorContainer>
-        <h3>{title}</h3>
-        <p>{author}</p>
-      </TitleAuthorContainer>
+        <TitleAuthorContainer>
+          <h3>{title}</h3>
+          <p>{displayAuthors}</p> {/* Display the authors */}
+        </TitleAuthorContainer>
         <CardFront cover={cover}>
-          {/* <Title>{title}</Title>
-          <Author>{author}</Author> */}
           <CoverImage src={cover} alt={title} />
         </CardFront>
         <CardBack>
@@ -136,7 +132,7 @@ const BookCard = ({ cover, title, author, summary, onSwitch }) => {
         </CardBack>
       </Card>
       <IconsContainer>
-        <CircularIcons onCircleClick={handleCircClick} />
+      <CircularIcons onCircleClick={handleCircClick} />
       </IconsContainer>
     </CardContainer>
   );
