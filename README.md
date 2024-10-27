@@ -1,4 +1,4 @@
-## bookworm
+### bookworm
 ## Inspiration
 As people who love to read, we know how annoying it is to try to find new book recommendations on our own. For this reason, we wanted to create a web application that would curate book recommendations based on whether or not we liked the summary of the book. Given the popularity of generative AI models, we decided to leverage them to give users a list of books based on whether they clicked the checkmark on a particular book.
 
