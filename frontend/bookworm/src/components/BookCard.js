@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import CircularIcons from './CircularIcons';
 
 const CardContainer = styled.div`
-  position: relative;
+  position: absolute; /* Change to absolute to position it relative to the nearest positioned ancestor */
+  top: 110px; /* Adjust as needed */
+  left: 530px; /* Adjust as needed */
   width: 400px; /* Set desired width */
   height: 500px; /* Set desired height */
   perspective: 1000px; /* Enable 3D perspective */
