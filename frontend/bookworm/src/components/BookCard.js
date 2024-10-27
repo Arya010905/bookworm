@@ -62,7 +62,7 @@ const Title = styled.h3`
   top: 415px;
   left: 10px;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 2.0em;
 `;
 
 const Author = styled.p`
@@ -70,7 +70,7 @@ const Author = styled.p`
   top: 300px;
   left: 10px;
   margin: 0;
-  font-size: 1em;
+  font-size: 1.7em;
 `;
 
 const IconsContainer = styled.div`

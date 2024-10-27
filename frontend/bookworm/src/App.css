@@ -92,8 +92,8 @@
 .signup-link {
   margin-left: 10px; /* Space between profile logo and Sign Up link */
   font-size: 20px;
-  margin-top: 720px;
-  margin-right: 15px;
+  margin-top: 20px;
+  margin-right: 130px;
   color: #282c34; /* Match the header text color */
   text-decoration: none; /* No underline */
 }
