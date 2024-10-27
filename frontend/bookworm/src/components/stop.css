@@ -2,11 +2,11 @@
     position: relative; /* Adjust as needed */
     /* You can use top, left, right, bottom to set specific positions */
     top: -300px; /* Adjust this value */
-    left: -290px; /* Adjust this value */
+    left: 20px; /* Adjust this value */
 }
 
 .stop-button {
-    background-color: red;
+    background-color: #7a0509;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -15,6 +15,8 @@
     border-radius: 5px;
     width: 150px; /* Set a fixed width */
     height: 50px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
 }
 
 .modal-overlay {

@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   height: 500px; /* Set desired height */
   perspective: 1000px; /* Enable 3D perspective */
   margin: 20px; /* Add margin to space out cards */
+  color: #006494;
 `;
 
 const Card = styled.div`
@@ -37,7 +38,7 @@ const CardFront = styled(CardSide)`
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    color: white;
+    color: #006494;;
     padding: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `;
@@ -49,7 +50,7 @@ const CoverImage = styled.img`
 `;
 
 const CardBack = styled(CardSide)`
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #e7f3fe;
   color: black;
   display: flex;
   justify-content: center;
@@ -57,6 +58,7 @@ const CardBack = styled(CardSide)`
   text-align: center;
   padding: 10px;
   transform: rotateY(180deg);
+  
 `;
 
 const Title = styled.h3`

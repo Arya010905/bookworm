@@ -7,7 +7,7 @@ const XIconContainer = styled.div`
   justify-content: space-between;
   width: calc(100% - 40px); /* Leave space on the left and right */
   bottom: -180px; /* Position below the card */
-  left: -100px; /* Center alignment */
+  left: -60px; /* Center alignment */
 `;
 
 const CheckIconContainer = styled.div`
@@ -20,8 +20,8 @@ const CheckIconContainer = styled.div`
 `;
 
 const Icon = styled.div`
-  width: 140px; /* Size of the circle */
-  height: 140px; /* Size of the circle */
+  width: 110px; /* Size of the circle */
+  height: 110px; /* Size of the circle */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -31,11 +31,11 @@ const Icon = styled.div`
   cursor: pointer;
 
   &.check {
-    background-color: green; /* Green background for check */
+    background-color: #057e82; /* Green background for check */
   }
 
   &.x {
-    background-color: red; /* Red background for X */
+    background-color: #7a0509; /* Red background for X */
   }
 `;
 
