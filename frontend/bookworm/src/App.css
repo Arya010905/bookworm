@@ -104,8 +104,8 @@
 
 /*sign up button on sign up page*/
 .sign-up-button {
-  background-color: #006494; /* Blue */
-  color: white;
+  background-color: #9B8579; /* Blue */
+  color: #21212B;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -118,7 +118,7 @@
 }
 
 .sign-up-button:hover {
-  background-color: #1b98e0; /* Darker blue */
+  background-color: #5E5352; /* Darker blue */
 }
 
 
