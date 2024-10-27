@@ -8,16 +8,16 @@ import { Route, Routes, Link } from 'react-router-dom';
 import BookList from './components/BookList';
 
 const App = () => {
+
   return (
     <div className="app-container">
       <div className="App-header">
-        <Link to="/"> {/* Wrap the logo with a Link component */}
+        <Link to="/">
           <img src={logo} alt="App Logo" className="app-logo" />
         </Link>
-        <h1 className="header-title"><i>bookworm</i></h1> {/* Header title */}
+        <h1 className="header-title"><i>bookworm</i></h1>
       </div>
 
-      {/* Routes for different pages */}
       <Routes>
         <Route
           path="/"
@@ -25,16 +25,19 @@ const App = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
               <BookList />
               <div className="top-right-links">
-                <Link to="/profile" className="profile-logo">
-                  <img src={profilelogo} alt="Profile" />
-                </Link>
-                <Link to="/signup" className="signup-link">Sign Up</Link> {/* Sign Up link */}
+                <div className="profile-logo">
+                  <Link to="/profile">
+                    <img src={profilelogo} alt="Profile" />
+                  </Link>
+                  <p className="profile-text">profile</p>
+                </div>
+                <Link to="/signup" className="sign-up-button">Sign Up</Link>
               </div>
             </div>
           }
         />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<Signup />} /> {/* Placeholder for Signup page */}
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
   );

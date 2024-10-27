@@ -1,8 +1,8 @@
 .stop-container {
     position: relative; /* Adjust as needed */
     /* You can use top, left, right, bottom to set specific positions */
-    top: -260px; /* Adjust this value */
-    left: 120px; /* Adjust this value */
+    top: -300px; /* Adjust this value */
+    left: -290px; /* Adjust this value */
 }
 
 .stop-button {
