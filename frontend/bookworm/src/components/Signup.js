@@ -1,4 +1,5 @@
 import React from 'react';
+import '/Users/sanya/Desktop/bookworm/frontend/bookworm/src/App.css'; // Ensure to import your CSS file
 
 const Signup = () => {
   const handleSignup = () => {
@@ -10,7 +11,9 @@ const Signup = () => {
   return (
     <div className="signup-page">
       <h1>Sign Up</h1>
-      <button onClick={handleSignup}>Sign Up with OAuth</button>
+      <button className="signup-button" onClick={handleSignup}>
+        Sign Up with OAuth
+      </button>
     </div>
   );
 };

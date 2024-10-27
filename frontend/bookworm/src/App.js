@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import profilelogo from './images/profilelogo.png';
+import logo from './images/logo.png'; // Import your main logo
 import Profile from './components/Profile';
 import Signup from './components/Signup';
 import { Route, Routes, Link } from 'react-router-dom';
@@ -9,7 +10,12 @@ import BookList from './components/BookList';
 const App = () => {
   return (
     <div className="app-container">
-      <Link to="/" className="App-header">bookworm</Link> {/* Clickable header */}
+      <div className="App-header">
+        <Link to="/"> {/* Wrap the logo with a Link component */}
+          <img src={logo} alt="App Logo" className="app-logo" />
+        </Link>
+        <h1 className="header-title"><i>bookworm</i></h1> {/* Header title */}
+      </div>
 
       {/* Routes for different pages */}
       <Routes>
