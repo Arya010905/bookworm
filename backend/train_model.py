@@ -14,7 +14,7 @@ import os
 
 
 headers = {
-    "X-OpenAI-Api-Key": "OpenAI_API_KEY"
+    "X-OpenAI-Api-Key": "OPENAI_API_KEY"
 }  # Replace with your OpenAI API key
 
 client = weaviate.connect_to_weaviate_cloud(
