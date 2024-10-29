@@ -21,4 +21,4 @@ A major thing we learned (because we spent so much time trying to figure it out)
 We want to implement a “stop” button that, when clicked, gives users a list of recommended books. Furthermore, we want to expand bookworm to create a community of readers who can interact with each other by posting their book recommendations in different “subworms.” This would create a great community element that would attract users to our platform. Furthermore, we would like to refine our ML model so that it gives books in an entirely different category when the X is clicked.
 
 ## This is bookworm
-[![Video Title](https://img.youtube.com/vi/e4zmgzrx6Q4&t=56s/0.jpg)](https://www.youtube.com/watch?v=e4zmgzrx6Q4&t=56s)
+[![Watch here](https://img.youtube.com/vi/e4zmgzrx6Q4&t=56s/0.jpg)](https://www.youtube.com/watch?v=e4zmgzrx6Q4&t=56s)
